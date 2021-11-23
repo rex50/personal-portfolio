@@ -785,7 +785,9 @@ header {
           text-align: center;
         }
 
-
+.tech-logo {
+  margin-bottom: 10%;
+}
 #colorlib-blog .owl-carousel {
   z-index: 0; }
 
