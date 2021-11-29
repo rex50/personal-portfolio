@@ -9,6 +9,10 @@
 		return (navigator.platform.indexOf("iPad") != -1);
 	};
 
+	var footer = function(){
+		$(".customFooter").load("footer.html");
+	}
+
 	var isiPhone = function(){
 	    return (
 			(navigator.platform.indexOf("iPhone") != -1) || 
@@ -158,3 +162,53 @@
 
 
 }());
+
+function validate() {
+	var msg = document.getElementById("input-msg");
+	var name = document.getElementById("input-name");
+	var email = document.getElementById("input-email");
+	
+	if(msg.value == "") {
+		showMessage("Ohh! you forgot to enter your message");
+		msg.focus();
+		return;
+	}
+
+	if(name.value == "") {
+		showMessage("Ohh! you forgot to enter your name");
+		name.focus();
+		return;
+	}
+
+	var emailCheck = /^([A-Za-z0-9_\-\.]{1,})\@([A-Za-z0-9_\-\.]{1,})\.([A-Za-z]{2,4})$/;
+	if(email.value == "" || emailCheck.test(email.value) == false) {
+		showMessage("Will need your correct E-mail to contact back")
+		email.focus();
+		return;
+	}
+
+	var successColor = "#00E699";
+	showMessage("Got your message, will try to reach you within 6 hours 🙂", successColor)
+}
+
+function showMessage(msg) {
+	var errColor = "#FF4D6A";
+	showMessage(msg, errColor)
+}
+
+function showMessage(msg, color) {
+	removeLastMsg();
+	var tag = document.createElement("p");
+	tag.id = "form-msg"
+	tag.style.color = color;
+	var text = document.createTextNode(msg);
+	tag.appendChild(text);
+	var result = document.getElementById("form-msg-container");
+	result.appendChild(tag);
+}
+
+function removeLastMsg() {
+	var lastChild = document.getElementById("form-msg");
+	if(lastChild!=null)
+		lastChild.remove();
+}
