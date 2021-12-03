@@ -788,6 +788,9 @@ header {
 .tech-logo {
   margin-bottom: 10%;
 }
+.header-logo {
+  height: 50px;
+}
 #colorlib-blog .owl-carousel {
   z-index: 0; }
 
