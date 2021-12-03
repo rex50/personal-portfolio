@@ -128,28 +128,29 @@
 								</ul>
 							</div>
 							<div class="col-md-7 col-md-push-1 animate-box">
-								<form action="http://formspree.io/pareshraut50@gmail.com" method="post">
+								<form action="https://formspree.io/f/xyyogavz" method="POST">
 									<div class="row">
 										<div class="col-md-12">
 											<div class="form-group">
-												<textarea name="" class="form-control" id="input-msg" cols="30" rows="7" placeholder="Message"></textarea>
+												<textarea name="_message" class="form-control" id="input-msg" cols="30" rows="7" placeholder="Message" required=""></textarea>
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
-												<input type="text" class="form-control" id="input-name" placeholder="Name">
+												<input name="_name" type="text" class="form-control" id="input-name" placeholder="Name" required="">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
-												<input type="text" class="form-control" name="_replyto" id="input-email" placeholder="Email">
+												<input name="_replyto" type="email" class="form-control" id="input-email" placeholder="Email" required="">
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="form-group">
-												<input type="submit" value="Send Message" class="btn btn-primary" id="btn-submit-contact" onclick="validate();">
+												<input type="submit" value="Send Message" class="btn btn-primary" id="btn-submit-contact">
 											</div>
 										</div>
+										<input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
 										<div class="col-md-12" id="form-msg-container">
 										</div>
 									</div>
