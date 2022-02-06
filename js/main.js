@@ -42,7 +42,7 @@
 				$('body').addClass('menu-show');
 				setTimeout(function(){
 					$('#colorlib-main-nav > .js-colorlib-nav-toggle').addClass('show');
-				}, 900);
+				}, 600);
 			}
 		})
 	};
