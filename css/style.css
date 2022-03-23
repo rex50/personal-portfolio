@@ -1261,7 +1261,8 @@ input[type="text"] {
 
 .colorlib-social-icons i {
   font-size: 24px;
-  color: #CA82F8; }
+  color: #CA82F8; 
+  padding-right: 1em;}
 
 #footer {
   padding: 8em 0;
